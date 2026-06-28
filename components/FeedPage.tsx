@@ -1,3 +1,6 @@
+import PortfolioCard from "./shared/PortfolioCard";
+import Badge from "./shared/Badge";
+import ActionBtn from "./shared/ActionBtn";
 import StatBox from "./shared/StatBox";
 import Panel from "./shared/Panel";
 export default function FeedPage() {
@@ -171,44 +174,6 @@ function AlertLine({ text }: { text: string }) {
         </div>
     );
 }
-function Badge({
-    text,
-    color,
-}: {
-    text: string;
-    color: "yellow" | "emerald" | "sky";
-}) {
-    const styles =
-        color === "yellow"
-            ? "bg-yellow-500/10 text-yellow-400 border-yellow-500/20"
-            : color === "emerald"
-                ? "bg-emerald-500/10 text-emerald-400 border-emerald-500/20"
-                : "bg-sky-500/10 text-sky-400 border-sky-500/20";
-
-    return (
-        <span className={`rounded-full border px-3 py-1 text-sm font-bold ${styles}`}>
-            {text}
-        </span>
-    );
-}
-function ActionBtn({
-    label,
-    secondary,
-}: {
-    label: string;
-    secondary?: boolean;
-}) {
-    return (
-        <button
-            className={`rounded-full px-4 py-2 text-sm font-bold transition ${secondary
-                ? "bg-slate-800 text-white hover:bg-slate-700"
-                : "bg-yellow-500 text-black hover:bg-yellow-400"
-                }`}
-        >
-            {label}
-        </button>
-    );
-}
 function FeedCard({
     imageLabel,
     user,
@@ -273,14 +238,6 @@ function FeedCard({
                 <ActionBtn label="💀 Roast It" secondary />
                 <ActionBtn label="💾 Save" secondary />
             </div>
-        </div>
-    );
-}
-function PortfolioCard({ title }: { title: string }) {
-    return (
-        <div className="rounded-2xl border border-zinc-800 bg-black/30 p-4">
-            <div className="mb-3 h-36 rounded-xl bg-gradient-to-br from-yellow-500/15 to-black" />
-            <div className="font-bold">{title}</div>
         </div>
     );
 }
