@@ -1,8 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import Header from "@/components/shared/Header";
-import FeedPage from "@/components/shared/FeedPage";
+import Header from "@/components/Header";
+import FeedPage from "@/components/FeedPage";
 type Tab = "feed" | "compete" | "post" | "ahj" | "profile";
 
 export default function Home() {
