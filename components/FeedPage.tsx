@@ -30,35 +30,12 @@ export default function FeedPage() {
                             </div>
                         </div>
 
-                        <div className="flex flex-col justify-between rounded-2xl border border-zinc-800 bg-black/30 p-5">
-                            <div>
-                                <div className="text-sm text-zinc-400">
-                                    @PipeSavage · Electrical
-                                    <span className="ml-2 text-yellow-400">🔥 ELITE</span>
-                                </div>
-
-                                <h2 className="mt-3 text-3xl font-black leading-tight">
-                                    Perfect switchgear install
-                                </h2>
-
-                                <p className="mt-3 text-base leading-7 text-zinc-300">
-                                    Dead-even gear faces, clean terminations, matching bends, and
-                                    labeling that doesn’t look like it survived a tornado.
-                                </p>
-
-                                <div className="mt-5 grid grid-cols-3 gap-3">
-                                    <StatBox label="Score" value="97" accent="text-emerald-400" />
-                                    <StatBox label="Percentile" value="Top 1%" accent="text-yellow-400" />
-                                    <StatBox label="Views" value="3.2k" accent="text-sky-400" />
-                                </div>
-                            </div>
-
-                            <div className="mt-5 flex flex-wrap gap-3">
-                                <ActionBtn label="🔥 Rate It" />
-                                <ActionBtn label="💾 Save" secondary />
-                                <ActionBtn label="📤 Share" secondary />
-                            </div>
-                        </div>
+                        <PortfolioCard
+                            title="Perfect switchgear install"
+                            author="@PipeSavage"
+                            trade="Electrical"
+                            description="Dead-even gear faces, clean terminations, matching bends, and labeling that doesn't look like it survived a tornado."
+                        />
                     </div>
                 </section>
 
