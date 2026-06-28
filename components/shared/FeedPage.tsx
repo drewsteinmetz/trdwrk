@@ -1,4 +1,3 @@
-import Panel from "./shared/Panel";
 export default function FeedPage() {
     return (
         <div className="grid gap-6 xl:grid-cols-[1.3fr_0.7fr]">
@@ -153,6 +152,20 @@ export default function FeedPage() {
                 </Panel>
             </aside>
         </div>
+    );
+}
+function Panel({
+    title,
+    children,
+}: {
+    title: string;
+    children: React.ReactNode;
+}) {
+    return (
+        <section className="rounded-[28px] border border-zinc-800 bg-zinc-950/80 p-5">
+            <h3 className="text-xl font-black">{title}</h3>
+            <div className="mt-4 space-y-3">{children}</div>
+        </section>
     );
 }
 function CrewLine({ crew, points }: { crew: string; points: string }) {
