@@ -1,3 +1,4 @@
+import StatBox from "./shared/StatBox";
 import Panel from "./shared/Panel";
 export default function FeedPage() {
     return (
@@ -280,22 +281,6 @@ function PortfolioCard({ title }: { title: string }) {
         <div className="rounded-2xl border border-zinc-800 bg-black/30 p-4">
             <div className="mb-3 h-36 rounded-xl bg-gradient-to-br from-yellow-500/15 to-black" />
             <div className="font-bold">{title}</div>
-        </div>
-    );
-}
-function StatBox({
-    label,
-    value,
-    accent,
-}: {
-    label: string;
-    value: string;
-    accent: string;
-}) {
-    return (
-        <div className="rounded-2xl border border-zinc-800 bg-black/30 p-4">
-            <div className="text-xs uppercase tracking-[0.18em] text-zinc-500">{label}</div>
-            <div className={`mt-2 text-2xl font-black ${accent}`}>{value}</div>
         </div>
     );
 }
