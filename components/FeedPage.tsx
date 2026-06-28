@@ -1,3 +1,4 @@
+import FeedCard from "./shared/FeedCard";
 import PortfolioCard from "./shared/PortfolioCard";
 import Badge from "./shared/Badge";
 import ActionBtn from "./shared/ActionBtn";
@@ -148,73 +149,6 @@ function AlertLine({ text }: { text: string }) {
     return (
         <div className="rounded-2xl border border-zinc-800 bg-black/30 p-4 text-sm text-zinc-300">
             {text}
-        </div>
-    );
-}
-function FeedCard({
-    imageLabel,
-    user,
-    trade,
-    badge,
-    badgeColor,
-    title,
-    desc,
-    score,
-    scoreColor,
-    scoreSub,
-    reactions,
-    gradient,
-}: {
-    imageLabel: string;
-    user: string;
-    trade: string;
-    badge: string;
-    badgeColor: string;
-    title: string;
-    desc: string;
-    score: string;
-    scoreColor: string;
-    scoreSub: string;
-    reactions: string[];
-    gradient: string;
-}) {
-    return (
-        <div className="rounded-[28px] border border-zinc-800 bg-zinc-950/80 p-5">
-            <div
-                className={`mb-4 flex h-56 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} text-zinc-500`}
-            >
-                [{imageLabel}]
-            </div>
-
-            <div className="text-sm text-zinc-400">
-                {user} · {trade}
-                <span className={`ml-2 ${badgeColor}`}>{badge}</span>
-            </div>
-
-            <h3 className="mt-3 text-3xl font-black leading-tight">{title}</h3>
-
-            <p className="mt-3 max-w-3xl text-base leading-7 text-zinc-300">{desc}</p>
-
-            <div className="mt-5 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                <div>
-                    <div className={`text-3xl font-black ${scoreColor}`}>{score}</div>
-                    <div className="text-sm text-zinc-500">{scoreSub}</div>
-                </div>
-
-                <div className="flex flex-wrap gap-3 text-sm">
-                    {reactions.map((r) => (
-                        <div key={r} className="rounded-full border border-zinc-800 bg-black/30 px-4 py-2">
-                            {r}
-                        </div>
-                    ))}
-                </div>
-            </div>
-
-            <div className="mt-5 flex flex-wrap gap-3">
-                <ActionBtn label="🔥 Rate This Install" />
-                <ActionBtn label="💀 Roast It" secondary />
-                <ActionBtn label="💾 Save" secondary />
-            </div>
         </div>
     );
 }
